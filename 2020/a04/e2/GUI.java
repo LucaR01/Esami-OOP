@@ -29,7 +29,6 @@ public class GUI extends JFrame {
         	var position = cells.get(button);
         	
         	if(this.logics.hit(position)) {
-        		//updateKing(position);
         		updateView(this.logics.getPieces());
         		
         		if(this.logics.isOver()) {
@@ -41,16 +40,12 @@ public class GUI extends JFrame {
                 
         for (int i=0; i<size; i++){
             for (int j=0; j<size; j++){
-                final JButton jb = new JButton(""); //new JButton(""+'\u2659'+'\u265A'+'\u265E');
+                final JButton jb = new JButton(""); 
                 this.cells.put(jb, new Pair<>(j,i));
                 jb.addActionListener(al);
                 panel.add(jb);
             }
         }
-        
-        //TODO: remove non servono più
-        /*updateKing(this.logics.getKing());
-        showPawns(this.logics.getPawns());*/
         
         updateView(this.logics.getPieces());
         
@@ -74,28 +69,5 @@ public class GUI extends JFrame {
     		});
     	});
     }
-    
-    //TODO: remove non servono più
-    /*private void updateKing(Pair<Integer,Integer> k) {
-    	this.cells.forEach( (b,p) -> {
-    		if(p.equals(k)) {
-    			if(this.logics.isKing()) {
-    				b.setText(GUI.KING);
-    			} else {
-    				b.setText(GUI.KNIGHT);
-    			}
-    		}
-    	});
-    }
-    
-    private void showPawns(Set<Pair<Integer, Integer>> s) {
-    	this.cells.forEach( (b,p) -> {
-    		s.forEach( n -> {
-    			if(p.equals(n)) {
-    				b.setText(GUI.PAWN);
-    			}
-    		});
-    	});
-    }*/
     
 }

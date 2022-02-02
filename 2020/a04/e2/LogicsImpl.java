@@ -73,7 +73,6 @@ public class LogicsImpl implements Logics {
 			for(var j : Set.of(-1, 0, 1)) {
 				var temp = new Pair<>(p.getX() + (i),p.getY() + (j));
 				if(inBoundaries(temp)) {
-					System.out.println("getNeighbours: " + temp); //TODO: remove
 					neighbours.add(temp);
 				}
 			}
