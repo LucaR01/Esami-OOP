@@ -39,8 +39,6 @@ public class GUI extends JFrame {
         ActionListener el = e -> {
         	var button = (JButton)e.getSource();
         	var position = this.cells.get(button);
-        	//button.setText(position.getX()+":"+position.getY());
-        	//button.setEnabled(false);
         	
         	if(this.logics.hit(position)) {
         		updateHead(position);

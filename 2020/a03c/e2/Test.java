@@ -34,7 +34,7 @@ public class Test {
 	 * - correttezza della parte opzionale: 2 punti
      */
 
-	// SEMI-FUNZIONANTE L'HO FATTO
+	// SEMI-FUNZIONANTE
     public static void main(String[] args) throws java.io.IOException {
         new GUI(5); 
     }
